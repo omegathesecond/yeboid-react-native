@@ -1,0 +1,9 @@
+# YeboID React Native / Expo development builds
+
+Read AGENTS.md and README.md in this repository.
+
+- Platform selection: https://docs.yeboid.com/platforms
+- Agent guide: https://docs.yeboid.com/ai-agents
+- Machine-readable SDK catalog: https://docs.yeboid.com/sdk-manifest.json
+
+Install/link react-native-app-auth and react-native-keychain in the host. Expo Go does not include these native modules; use a development build. Keep one client instance; refresh is single-flight. permissions() fetches actual grants; tokens do not persist a configured scope wishlist.

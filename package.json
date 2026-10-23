@@ -1,0 +1,46 @@
+{
+  "name": "yeboid-react-native",
+  "version": "0.1.0",
+  "description": "YeboID AppAuth sign-in and secure token storage for React Native",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "AGENTS.md",
+    "llms.txt"
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/omegathesecond/yeboid-react-native",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --external react-native-app-auth --external react-native-keychain",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "react-native-app-auth": ">=8.0.0 <10",
+    "react-native-keychain": ">=9.0.0 <11"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "react-native-app-auth": "^8.1.0",
+    "react-native-keychain": "^10.0.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  },
+  "overrides": {
+    "esbuild": "^0.28.1"
+  }
+}
